@@ -6,14 +6,20 @@ import { Outlet } from "react-router-dom";
 const AdminLayout = () => {
   return (
     <>
-      <Header />
-      <div>
-        <SideBar />
-        <div>
-          <Outlet />
+      <div className="row">
+        <div className="col-2 border">
+          <SideBar />
+        </div>
+        <div className="col-10 border">
+          <Header />
+          <div>
+            <div>
+              <Outlet />
+            </div>
+          </div>
+          <Footer />
         </div>
       </div>
-      <Footer />
     </>
   );
 };
